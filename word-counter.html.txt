@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Word Counter</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<h2 style="text-align:center;">Word Counter</h2>
+
+<textarea id="text" style="width:80%;height:200px;margin:20px auto;display:block;"></textarea>
+
+<h3 id="result" style="text-align:center;">Words: 0</h3>
+
+<script>
+const text = document.getElementById("text");
+const result = document.getElementById("result");
+
+text.addEventListener("input", () => {
+  let words = text.value.trim().split(/\s+/).filter(Boolean);
+  result.innerText = "Words: " + words.length;
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+const searchBox = document.getElementById("searchBox");
+const cards = document.querySelectorAll(".card");
+
+searchBox.addEventListener("input", function () {
+  let value = searchBox.value.toLowerCase();
+
+  cards.forEach(card => {
+    card.style.display =
+      card.innerText.toLowerCase().includes(value)
+        ? "block"
+        : "none";
+  });
+});
